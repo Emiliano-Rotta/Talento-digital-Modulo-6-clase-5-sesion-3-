@@ -77,14 +77,46 @@ console.log(mensajeGlobal)
 // Ejercicio 2: Cambiar valores con let y const
 // Consigna: Crea una variable let llamada contador y asígnale un valor inicial de 5. Luego, incrementa su valor en 1. Después, intenta hacer lo mismo con una constante const llamada numeroConstante con valor 10. Observa qué sucede y explica por qué.
 
+let contador = 5
+contador ++
+console.log(contador)
+
+const numeroConstante = 10
+// numeroConstante ++
+console.log(numeroConstante)
+// no se puede modificar debido a que es una const.
+
 // Ejercicio 3: Scope de variables en funciones
 // Consigna: Declara una función imprimirMensaje que tenga una variable let llamada mensaje con el valor "Hola desde la función". Intenta acceder a mensaje fuera de la función y explica qué sucede.
 
-
+function imprimirMensaje() {
+    let mensaje = "Hola desde la funcion"
+}
+// console.log(mensaje)
+// el mensaje no esta definido debido a que esta declarado dentro de la funcion y lo estamos llamande desde afuera.
 
 // Ejercicio 4: Funciones comunes y flechas
 // Consigna: Crea una función común llamada saludarPersona que reciba un nombre y devuelva un saludo. Luego crea una función flecha llamada saludarPersonaFlecha que haga lo mismo. Llama ambas funciones y verifica que el resultado sea el mismo.
 
+function saludarPersona(nombre) {
+    return `Hola, ${nombre}!`
+}
+
+const saludarPersonaFlecha = (nombre) => `Hola, ${nombre}!`
+
+console.log(saludarPersona("Juan"));
+console.log(saludarPersonaFlecha("Juan"));
+
 
 // Ejercicio 5: Concatenación e interpolación
 // Consigna: Crea una variable nombre y otra variable edad. Luego crea una oración que diga "Mi nombre es [nombre] y tengo [edad] años" usando concatenación y luego usando interpolación.
+
+var nombre = "Juan" 
+var edad =  "32"
+
+let oracion = "Hola, mi nombre es " + nombre + " y tengo " + edad + " años "
+let oracionInter = `Hola, mi nombre es ${nombre} y tengo ${edad} años`
+
+console.log(oracion);
+console.log(oracionInter);
+
