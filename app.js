@@ -55,68 +55,110 @@
 // }
 // saludar()
 
-const saludar = (nombre, apellido) => console.log("Hola " + nombre + " " + apellido)
-saludar("Emi", "Rotta")
+// const saludar = (nombre, apellido) => console.log("Hola " + nombre + " " + apellido)
+// saludar("Emi", "Rotta")
 
-//Ejemplo 
+// //Ejemplo 
 
-//Declara una variable var llamada mensajeGlobal fuera de una función, una variable let llamada mensajeLocal dentro de un bloque y una constante const llamada mensajeConstante dentro de una función. Imprime cada variable para ver si es accesible dentro o fuera de su scope.
-var mensajeGlobal = "Estoy en el scope global";
+// //Declara una variable var llamada mensajeGlobal fuera de una función, una variable let llamada mensajeLocal dentro de un bloque y una constante const llamada mensajeConstante dentro de una función. Imprime cada variable para ver si es accesible dentro o fuera de su scope.
+// var mensajeGlobal = "Estoy en el scope global";
 
-function verificarScope() {
-    const mensajeConstante = "Estoy en el scope de la funcion";
-    if(true){
-        let mensajeLocal = "Estoy en el scope del bloque";
-        console.log(mensajeLocal)
-    }
-    console.log(mensajeConstante)
-}
-verificarScope()
-console.log(mensajeGlobal)
+// function verificarScope() {
+//     const mensajeConstante = "Estoy en el scope de la funcion";
+//     if(true){
+//         let mensajeLocal = "Estoy en el scope del bloque";
+//         console.log(mensajeLocal)
+//     }
+//     console.log(mensajeConstante)
+// }
+// verificarScope()
+// console.log(mensajeGlobal)
 
-// Ejercicio 2: Cambiar valores con let y const
-// Consigna: Crea una variable let llamada contador y asígnale un valor inicial de 5. Luego, incrementa su valor en 1. Después, intenta hacer lo mismo con una constante const llamada numeroConstante con valor 10. Observa qué sucede y explica por qué.
+// // Ejercicio 2: Cambiar valores con let y const
+// // Consigna: Crea una variable let llamada contador y asígnale un valor inicial de 5. Luego, incrementa su valor en 1. Después, intenta hacer lo mismo con una constante const llamada numeroConstante con valor 10. Observa qué sucede y explica por qué.
 
-let contador = 5
-contador ++
-console.log(contador)
+// let contador = 5
+// contador ++
+// console.log(contador)
 
-const numeroConstante = 10
-// numeroConstante ++
-console.log(numeroConstante)
-// no se puede modificar debido a que es una const.
+// const numeroConstante = 10
+// // numeroConstante ++
+// console.log(numeroConstante)
+// // no se puede modificar debido a que es una const.
 
-// Ejercicio 3: Scope de variables en funciones
-// Consigna: Declara una función imprimirMensaje que tenga una variable let llamada mensaje con el valor "Hola desde la función". Intenta acceder a mensaje fuera de la función y explica qué sucede.
+// // Ejercicio 3: Scope de variables en funciones
+// // Consigna: Declara una función imprimirMensaje que tenga una variable let llamada mensaje con el valor "Hola desde la función". Intenta acceder a mensaje fuera de la función y explica qué sucede.
 
-function imprimirMensaje() {
-    let mensaje = "Hola desde la funcion"
-}
-// console.log(mensaje)
-// el mensaje no esta definido debido a que esta declarado dentro de la funcion y lo estamos llamande desde afuera.
+// function imprimirMensaje() {
+//     let mensaje = "Hola desde la funcion"
+// }
+// // console.log(mensaje)
+// // el mensaje no esta definido debido a que esta declarado dentro de la funcion y lo estamos llamande desde afuera.
 
-// Ejercicio 4: Funciones comunes y flechas
-// Consigna: Crea una función común llamada saludarPersona que reciba un nombre y devuelva un saludo. Luego crea una función flecha llamada saludarPersonaFlecha que haga lo mismo. Llama ambas funciones y verifica que el resultado sea el mismo.
+// // Ejercicio 4: Funciones comunes y flechas
+// // Consigna: Crea una función común llamada saludarPersona que reciba un nombre y devuelva un saludo. Luego crea una función flecha llamada saludarPersonaFlecha que haga lo mismo. Llama ambas funciones y verifica que el resultado sea el mismo.
 
-function saludarPersona(nombre) {
-    return `Hola, ${nombre}!`
-}
+// function saludarPersona(nombre) {
+//     return `Hola, ${nombre}!`
+// }
 
-const saludarPersonaFlecha = (nombre) => `Hola, ${nombre}!`
+// const saludarPersonaFlecha = (nombre) => `Hola, ${nombre}!`
 
-console.log(saludarPersona("Juan"));
-console.log(saludarPersonaFlecha("Juan"));
+// console.log(saludarPersona("Juan"));
+// console.log(saludarPersonaFlecha("Juan"));
 
 
-// Ejercicio 5: Concatenación e interpolación
-// Consigna: Crea una variable nombre y otra variable edad. Luego crea una oración que diga "Mi nombre es [nombre] y tengo [edad] años" usando concatenación y luego usando interpolación.
+// // Ejercicio 5: Concatenación e interpolación
+// // Consigna: Crea una variable nombre y otra variable edad. Luego crea una oración que diga "Mi nombre es [nombre] y tengo [edad] años" usando concatenación y luego usando interpolación.
 
-var nombre = "Juan" 
-var edad =  "32"
+// var nombre = "Juan" 
+// var edad =  "32"
 
-let oracion = "Hola, mi nombre es " + nombre + " y tengo " + edad + " años "
-let oracionInter = `Hola, mi nombre es ${nombre} y tengo ${edad} años`
+// let oracion = "Hola, mi nombre es " + nombre + " y tengo " + edad + " años "
+// let oracionInter = `Hola, mi nombre es ${nombre} y tengo ${edad} años`
 
-console.log(oracion);
-console.log(oracionInter);
+// console.log(oracion);
+// console.log(oracionInter);
 
+//Concatenación e Interpolación
+
+let nombreProfesor = "Emiliano"
+
+let concatenación = "El profesor es " + nombreProfesor;
+let interpolacion = `El profesor es ${nombreProfesor}`
+
+console.log(concatenación)
+console.log(interpolacion)
+
+let nombre = "María";
+let edad = 25;
+let mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`;
+console.log(mensaje); // "Hola, mi nombre es María y tengo 25 años."
+
+// Ventajas de la Interpolación
+// Legibilidad: Las cadenas interpoladas son más fáciles de leer y entender, especialmente cuando hay varias variables y expresiones.
+// Facilidad de Uso: No es necesario preocuparse por los operadores de concatenación, ya que todo queda dentro de un único template literal.
+
+//--------------------------------------------------------------------------
+
+// Consignas de los Ejercicios
+
+// Declara una variable var llamada mensajeGlobal con un mensaje y luego intenta acceder a esa variable dentro de una función. ¿Es posible? Explica por qué.
+
+// Crea una función llamada imprimirSaludo que reciba un nombre y devuelva "Hola, [nombre]". Usa concatenación para crear el mensaje.
+
+// Declara una constante const llamada PI con el valor 3.14. Intenta reasignar un nuevo valor a PI y observa el resultado. Explica qué sucede.
+
+// Crea una función llamada calcularAreaCirculo que reciba el radio de un círculo y devuelva el área usando la constante PI. (Recuerda: área = PI * radio * radio).
+
+// Declara una variable let dentro de un bloque if y accede a ella tanto dentro como fuera del bloque. Describe el resultado y explica el por qué.
+
+// Declara dos variables, nombre y edad, e imprime un mensaje usando interpolación que diga: "Mi nombre es [nombre] y tengo [edad] años."
+
+// Crea una función flecha llamada doblarNumero que reciba un número y retorne el doble de ese número.
+
+// Escribe una función llamada calcularEdad que reciba el año de nacimiento y el año actual y devuelva la edad calculada. Usa interpolación para el mensaje que diga "Tienes [edad] años."
+
+// Declara una variable let llamada contador y asígnale el valor 1. Luego, incrementa su valor en 1 y muestra el resultado en la consola.
+
+// Escribe una función que use let y const correctamente para sumar dos números. Llama a la función con dos números y muestra el resultado en la consola.
