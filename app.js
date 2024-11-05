@@ -122,43 +122,107 @@
 
 //Concatenación e Interpolación
 
-let nombreProfesor = "Emiliano"
+// let nombreProfesor = "Emiliano"
 
-let concatenación = "El profesor es " + nombreProfesor;
-let interpolacion = `El profesor es ${nombreProfesor}`
+// let concatenación = "El profesor es " + nombreProfesor;
+// let interpolacion = `El profesor es ${nombreProfesor}`
 
-console.log(concatenación)
-console.log(interpolacion)
+// console.log(concatenación)
+// console.log(interpolacion)
 
-let nombre = "María";
-let edad = 25;
-let mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`;
-console.log(mensaje); // "Hola, mi nombre es María y tengo 25 años."
+// let nombre = "María";
+// let edad = 25;
+// let mensaje = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`;
+// console.log(mensaje); // "Hola, mi nombre es María y tengo 25 años."
 
-// Ventajas de la Interpolación
-// Legibilidad: Las cadenas interpoladas son más fáciles de leer y entender, especialmente cuando hay varias variables y expresiones.
-// Facilidad de Uso: No es necesario preocuparse por los operadores de concatenación, ya que todo queda dentro de un único template literal.
+// // Ventajas de la Interpolación
+// // Legibilidad: Las cadenas interpoladas son más fáciles de leer y entender, especialmente cuando hay varias variables y expresiones.
+// // Facilidad de Uso: No es necesario preocuparse por los operadores de concatenación, ya que todo queda dentro de un único template literal.
 
-//--------------------------------------------------------------------------
+// //--------------------------------------------------------------------------
 
-// Consignas de los Ejercicios
+// // Consignas de los Ejercicios
 
-// Declara una variable var llamada mensajeGlobal con un mensaje y luego intenta acceder a esa variable dentro de una función. ¿Es posible? Explica por qué.
+// // Declara una variable var llamada mensajeGlobal con un mensaje y luego intenta acceder a esa variable dentro de una función. ¿Es posible? Explica por qué.
+// var mensajeGlobal = "Este es un mensaje global";
 
-// Crea una función llamada imprimirSaludo que reciba un nombre y devuelva "Hola, [nombre]". Usa concatenación para crear el mensaje.
+// function mostrarMensaje() {
+//   console.log(mensajeGlobal); // Accesible, ya que var tiene alcance global si está fuera de una función.
+// }
 
-// Declara una constante const llamada PI con el valor 3.14. Intenta reasignar un nuevo valor a PI y observa el resultado. Explica qué sucede.
+// mostrarMensaje(); // "Este es un mensaje global"
 
-// Crea una función llamada calcularAreaCirculo que reciba el radio de un círculo y devuelva el área usando la constante PI. (Recuerda: área = PI * radio * radio).
 
-// Declara una variable let dentro de un bloque if y accede a ella tanto dentro como fuera del bloque. Describe el resultado y explica el por qué.
+// // Crea una función llamada imprimirSaludo que reciba un nombre y devuelva "Hola, [nombre]". Usa concatenación para crear el mensaje.
+// function imprimirSaludo(nombre) {
+//     return "Hola, " + nombre;
+//   }
+  
+//   console.log(imprimirSaludo("Juan")); // "Hola, Juan"
+  
+
+
+// // Declara una constante const llamada PI con el valor 3.14. Intenta reasignar un nuevo valor a PI y observa el resultado. Explica qué sucede.
+// // const PI = 3.14;
+// //PI = 3.1415; // Error: Assignment to constant variable.
+// // Esto causa un error porque PI es una constante y no puede ser reasignada.
+
+
+// // Crea una función llamada calcularAreaCirculo que reciba el radio de un círculo y devuelva el área usando la constante PI. (Recuerda: área = PI * radio * radio).
+// const PI = 3.14;
+
+// function calcularAreaCirculo(radio) {
+//   return PI * radio * radio;
+// }
+
+// console.log(calcularAreaCirculo(5)); // 78.5
+
+
+// // Declara una variable let dentro de un bloque if y accede a ella tanto dentro como fuera del bloque. Describe el resultado y explica el por qué.
+// if (true) {
+//     let mensaje = "Variable dentro del bloque";
+//     console.log(mensaje); // "Variable dentro del bloque" - Accesible dentro del bloque
+//   }
+  
+  // console.log(mensaje); // Error: mensaje is not defined - No es accesible fuera del bloque
+  
 
 // Declara dos variables, nombre y edad, e imprime un mensaje usando interpolación que diga: "Mi nombre es [nombre] y tengo [edad] años."
+let nombre = "Ana";
+let edad = 28;
+
+let mensaje = `Mi nombre es ${nombre} y tengo ${edad} años.`;
+console.log(mensaje); // "Mi nombre es Ana y tengo 28 años."
+
 
 // Crea una función flecha llamada doblarNumero que reciba un número y retorne el doble de ese número.
+const doblarNumero = numero => numero * 2;
+
+console.log(doblarNumero(5)); // 10
+
 
 // Escribe una función llamada calcularEdad que reciba el año de nacimiento y el año actual y devuelva la edad calculada. Usa interpolación para el mensaje que diga "Tienes [edad] años."
 
+function calcularEdad(anioNacimiento, anioActual) {
+    let edad = anioActual - anioNacimiento;
+    return `Tienes ${edad} años.`;
+  }
+  
+  console.log(calcularEdad(1993, 2024)); // "Tienes 31 años."
+  
+
 // Declara una variable let llamada contador y asígnale el valor 1. Luego, incrementa su valor en 1 y muestra el resultado en la consola.
+let contador = 1;
+contador ++;
+console.log(contador); // 2
 
 // Escribe una función que use let y const correctamente para sumar dos números. Llama a la función con dos números y muestra el resultado en la consola.
+
+function sumarNumeros(num1, num2) {
+    let resultado = num1 + num2;
+    const resultadoDos = num1 + num2;
+    return resultado;
+  }
+  
+  console.log(sumarNumeros(3, 7)); // 10
+  
